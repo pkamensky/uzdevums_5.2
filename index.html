@@ -13,22 +13,22 @@
       <button type="button" id="disk">Aprekinat</button>
 <p> <span id="rezz"></span> <span id="rezz1"></span> </p>
       <script>
-        var aa=a.value;
-        var bb=b.value;
-        var cc=c.value;
+        var aa=Number(getElemenrByID('a').value);
+        var bb=Number(getElemenrByID('b').value);
+        var cc=Number(getElemenrByID('c').value);
         var D=0;
 function disk(a, b, c){
-D=bb^2-4*aa*cc
+D=bb*bb-4*aa*cc
 saknes();
 }
-function saknes(){
+function saknes(a, b, disk(a, b, c)){
 if (D<0){
     rezz.innerHTML="Kvadrātvienādojumam nav reālu sakņu."
     return false;
 } else if (D>=0){
     x1=(-bb+Math.sqrt(D))/2*aa;
     x2=(-bb-Math.sqrt(D))/2*aa;
-    return x1, x2;
+    return [x1, x2];
 rezz.innerHTML=x1;
 rezz1.innerHTML=x2;
 }
