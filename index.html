@@ -6,6 +6,38 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Kvadratvienadojumu risinatajs</h1>
+    <p> <input type="number" id="a"> </p>
+     <p> <input type="number" id="b"> </p>
+      <p> <input type="number" id="c"> </p>
+      <button type="button" id="disk">Aprekinat</button>
+<p> <span id="rezz"></span> <span id="rezz1"></span> </p>
+      <script>
+        var aa=a.value;
+        var bb=b.value;
+        var cc=c.value;
+        var D=0;
+function disk(a, b, c){
+D=bb^2-4*aa*cc
+saknes();
+}
+function saknes(){
+if (D<0){
+    rezz.innerHTML="Kvadrātvienādojumam nav reālu sakņu."
+    return false;
+} else if (D>=0){
+    x1=(-bb+Math.sqrt(D))/2*aa;
+    x2=(-bb-Math.sqrt(D))/2*aa;
+    return x1, x2;
+rezz.innerHTML=x1;
+rezz1.innerHTML=x2;
+}
+
+
+}
+
+
+
+      </script>
 </body>
 </html>
